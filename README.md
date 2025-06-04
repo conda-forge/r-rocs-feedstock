@@ -210,6 +210,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@RECETOX/conda](https://github.com/RECETOX/conda/)
-* [@conda-forge/r](https://github.com/conda-forge/r/)
+* [@RECETOX/conda](https://github.com/orgs/RECETOX/teams/conda/)
+* [@conda-forge/r](https://github.com/orgs/conda-forge/teams/r/)
 
