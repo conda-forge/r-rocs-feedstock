@@ -4,7 +4,7 @@
 
 package:
   name: r-rocs
-  version: {{ version|replace("-", "_") }}
+  version: "{{ version|replace("-", "_") }}"
 
 source:
   url:
@@ -13,7 +13,7 @@ source:
   sha256: e829160dc126b680b72e542ed871d15d615befc388edeec90e657b27a26a2fa3
 
 build:
-  number: 1
+  number: 2
   rpaths:
     - lib/R/lib/
     - lib/
@@ -21,12 +21,6 @@ build:
 requirements:
   build:
     - {{ posix }}zip               # [win]
-    - {{ cdt('mesa-libgl-devel') }}  # [linux]
-    - {{ cdt('mesa-dri-drivers') }}  # [linux]
-    - {{ cdt('libselinux') }}  # [linux]
-    - {{ cdt('libxdamage') }}  # [linux]
-    - {{ cdt('libxxf86vm') }}  # [linux]
-    - {{ cdt('libxext') }}     # [linux]
 
   host:
     - xorg-libxfixes  # [linux]
@@ -34,6 +28,7 @@ requirements:
     - r-poibin
     - r-rgl
 
+    - libgl-devel                    # [linux]
   run:
     - r-base
     - r-poibin
@@ -46,7 +41,8 @@ test:
 
 about:
   home: https://CRAN.R-project.org/package=ROCS
-  summary: Plots the Receiver Operating Characteristics Surface for high-throughput class-skewed data, calculates the Volume under the Surface (VUS) and the FDR-Controlled Area Under the Curve (FCAUC), and conducts tests to compare two ROC surfaces. Computes eROC curve and the corresponding AUC for imperfect reference standard.
+  summary: Plots the Receiver Operating Characteristics Surface for high-throughput class-skewed data, calculates the Volume under the Surface (VUS) and the FDR-Controlled Area Under the Curve (FCAUC), and conducts tests to compare two ROC surfaces. Computes eROC curve and the corresponding AUC for imperfect reference 
+    standard.
   license: GPL-2.0-only
   license_family: GPL2
   license_file:
